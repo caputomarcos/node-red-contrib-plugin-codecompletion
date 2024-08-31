@@ -1,0 +1,59 @@
+<script>
+    monaco.languages.registerInlineCompletionsProvider("javascript", {
+        provideInlineCompletions: async function (model) {
+            const editors = monaco.editor.getEditors();
+            let code = editors.find(function (editor) {
+                return editor.getModel()?.uri?.toString() === model.uri.toString();
+            }).getValue();
+            code = code.replace("\nreturn msg;", "");
+            console.log("code=" + code);
+
+            console.log("generating code...")
+            const result = await $.ajax({
+                url: "http://localhost:11434/api/generate",
+                type: "POST",
+                contentType: "application/json",
+                data: JSON.stringify({
+                    "model": "granite-code",
+                    "raw": true,
+                    "keep_alive": 1800,
+                    "options": {
+                        "temperature": 0.01,
+                        "num_predict": 1024,
+                        "stop": [
+                            "<fim_prefix>",
+                            "<fim_suffix>",
+                            "<fim_middle>",
+                            "<|endoftext|>",
+                            "<file_sep>",
+                            "</fim_middle>",
+                            "</code>",
+                            "\n\n",
+                            "\r\n\r\n",
+                            "/src/",
+                            "#- coding: utf-8",
+                            "```",
+                            "t.",
+                            "\nt",
+                            "<file_sep>",
+                            "\nfunction",
+                            "\nclass",
+                            "\nmodule",
+                            "\nexport",
+                            "\nimport"
+                        ],
+                        "num_ctx": 4096
+                    },
+                    "prompt": "<fim_prefix>" + code + "<fim_suffix><fim_middle>",
+                    stream: false
+                })
+            });
+
+            let completion = result.response.replace(/console.log/g, "node.warn");
+            console.log("completion=" + completion);
+            return Promise.resolve({
+                items: [{ insertText: completion }]
+            });
+        }
+    });
+</script>
