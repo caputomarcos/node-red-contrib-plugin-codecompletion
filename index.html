@@ -8,7 +8,7 @@
             code = code.replace("\nreturn msg;", "");
             console.log("code=" + code);
 
-            console.log("generating completion...")
+            console.log("generating code...")
             const result = await $.ajax({
                 url: "http://localhost:11434/api/generate",
                 type: "POST",
