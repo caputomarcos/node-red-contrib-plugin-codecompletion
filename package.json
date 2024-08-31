@@ -3,7 +3,11 @@
     "version": "0.0.1",
     "description": "Code completion plugin for Node-RED's function nodes",
     "main": "index.js",
+    "engines": {
+        "node": ">=22.0.0"
+    },
     "node-red": {
+        "version": ">=4.0.0",
         "plugins": {
             "codecompletion": "index.html"
         }
