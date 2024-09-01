@@ -3,12 +3,12 @@
 Code completion plugin for Node-RED's function nodes
 
 This plugin enables the code completion in the code editor of function nodes.
-While typing code, the editor automatically suggests the code based on the existing code.
-By simply pressing the tab key, the user can accept and insert the suggested code.
+While typing code, the editor will automatically suggests the code based on the existing code.
+The user can accept and insert the suggested code by simply pressing the tab key.
 
 ![](fizzbuzz.png)
 
-## Setup
+## Setting up
 As this plugin uses Ollama, users need to install it in advance.
 
 - For Windows and macOS
@@ -22,6 +22,7 @@ As this plugin uses Ollama, users need to install it in advance.
   ```
   curl -fsSL https://ollama.com/install.sh | sh
   ```
+
 ## Demonstration
 Generating FizzBuzz code
 
