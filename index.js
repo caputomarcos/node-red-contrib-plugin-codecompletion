@@ -63,7 +63,11 @@ module.exports = async function (RED) {
         });
 
         req2.on("error", function (error) {
-            RED.log.info("Failed to connect to Ollama server: " + error);
+            RED.log.info("Failed to connect to Ollama server");
+            RED.comms.publish('completion', {
+                "message": "Failed to connect to Ollama server",
+                "options": { "type": "error" }
+            });
         });
 
         req2.write(data);

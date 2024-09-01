@@ -21,4 +21,8 @@
             });
         }
     });
+
+    RED.comms.subscribe('completion', function (type, body) {
+        RED.notify(body.message, body.options);
+    });
 </script>
