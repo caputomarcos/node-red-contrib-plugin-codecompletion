@@ -12,12 +12,6 @@
             "codecompletion": "index.html"
         }
     },
-    "scripts": {
-        "test": "node-red-dev validate"
-    },
-    "devDependencies": {
-        "node-red-dev": "0.1.6"
-    },
     "repository": {
         "type": "git",
         "url": "git+https://github.com/kazuhitoyokoi/node-red-contrib-plugin-codecompletion.git"
