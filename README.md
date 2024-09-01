@@ -5,7 +5,7 @@ Local LLM, [Granite Code Model](https://github.com/ibm-granite/granite-code-mode
 While typing the code manually, the editor will automatically suggest the generated code based on the existing code.
 The user can accept and insert the suggested code by simply pressing the Tab key.
 
-<img width="1440" alt="fizzbuzz" src="https://github.com/user-attachments/assets/1611a5a3-bb8e-41a1-8f29-2b747a2f88e5">
+<img width="1440" alt="fizzbuzz" src="https://github.com/user-attachments/assets/2b57102b-e572-4335-919d-66907399391f">
 
 ## Setting up
 Since this plugin uses [Ollama](https://github.com/ollama/ollama), users need to install it in advance.
