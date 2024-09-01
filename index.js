@@ -21,9 +21,7 @@ module.exports = async function (RED) {
         });
         res1.on("end", function () {
             RED.log.info("model for codecompletion is loaded");
-            RED.comms.publish('completion', {
-                "message": "model for code completion is loaded"
-            });
+            RED.comms.publish('completion', { "message": "model for code completion is loaded" });
         });
     });
 
@@ -90,7 +88,10 @@ module.exports = async function (RED) {
         const req2 = http.request(options2, function (res2) {
             let completion = "";
             res2.on("data", function (chunk) {
-                completion += JSON.parse(chunk).response;
+                let parsedChunk = JSON.parse(chunk);
+                if (parsedChunk.response) {
+                    completion += parsedChunk.response;
+                }
             });
             res2.on("end", function () {
                 completion = completion.replace(/console.log/g, "node.warn");
