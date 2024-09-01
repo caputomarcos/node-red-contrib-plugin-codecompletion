@@ -22,3 +22,8 @@ As this plugin uses Ollama, users need to install it in advance.
   ```
 ## Demonstration
 Generating FizzBuzz code
+
+
+https://github.com/user-attachments/assets/b9dabb40-ee5b-47c6-ace5-979d3cb5e03f
+
+
