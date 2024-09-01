@@ -1,7 +1,5 @@
 # node-red-contrib-plugin-codecompletion
 
-Code completion plugin for Node-RED's function nodes
-
 This plugin enables the code completion in the code editor of function nodes.
 While typing code, the editor will automatically suggests the code based on the existing code.
 The user can accept and insert the suggested code by simply pressing the tab key.
