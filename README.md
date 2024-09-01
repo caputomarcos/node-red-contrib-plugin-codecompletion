@@ -8,7 +8,7 @@ The user can accept and insert the suggested code by simply pressing the Tab key
 <img width="1440" alt="fizzbuzz" src="https://github.com/user-attachments/assets/1611a5a3-bb8e-41a1-8f29-2b747a2f88e5">
 
 ## Setting up
-Since this plugin uses Ollama, users need to install it in advance.
+Since this plugin uses [Ollama](https://github.com/ollama/ollama), users need to install it in advance.
 
 - For Windows and macOS
 
