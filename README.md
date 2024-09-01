@@ -9,7 +9,7 @@ The user can accept and insert the suggested code by simply pressing the tab key
 ![](fizzbuzz.png)
 
 ## Setting up
-As this plugin uses Ollama, users need to install it in advance.
+Since this plugin uses Ollama, users need to install it in advance.
 
 - For Windows and macOS
 
