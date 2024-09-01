@@ -6,7 +6,7 @@ This plugin enables the code completion in the code editor of function nodes.
 While typing code, the editor will automatically suggests the code based on the existing code.
 The user can accept and insert the suggested code by simply pressing the tab key.
 
-![](fizzbuzz.png)
+<img width="1440" alt="fizzbuzz" src="https://github.com/user-attachments/assets/1611a5a3-bb8e-41a1-8f29-2b747a2f88e5">
 
 ## Setting up
 Since this plugin uses Ollama, users need to install it in advance.
