@@ -12,7 +12,9 @@ By simply pressing the tab key, the user can accept and insert the suggested cod
 As this plugin uses Ollama, users need to install it in advance.
 
 - For Windows and macOS
-  You can use the installer to set up the Ollama environment.
+
+  To set up the Ollama environment, you can use the installer provided on the following website.
+
   https://ollama.com/download
 
 - For Linux
