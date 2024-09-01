@@ -89,7 +89,13 @@ module.exports = async function (RED) {
             let completion = "";
             res2.on("data", function (chunk) {
                 let parsedChunk = JSON.parse(chunk);
-                if (parsedChunk.response) {
+                if (parsedChunk.error) {
+                    RED.log.info(parsedChunk.error);
+                    RED.comms.publish('completion', {
+                        "message": parsedChunk.error,
+                        "options": { "type": "error" }
+                    });
+                } else if (parsedChunk.response) {
                     completion += parsedChunk.response;
                 }
             });
