@@ -1,10 +1,10 @@
 {
     "name": "@kazuhitoyokoi/node-red-contrib-plugin-codecompletion",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "Code completion plugin for Node-RED's function nodes",
     "main": "index.js",
     "engines": {
-        "node": ">=22.0.0"
+        "node": ">=20.0.0"
     },
     "node-red": {
         "version": ">=4.0.0",
@@ -22,8 +22,5 @@
     ],
     "author": "kazuhitoyokoi",
     "license": "Apache-2.0",
-    "bugs": {
-        "url": "https://github.com/kazuhitoyokoi/node-red-contrib-plugin-codecompletion/issues"
-    },
     "homepage": "https://github.com/kazuhitoyokoi/node-red-contrib-plugin-codecompletion#readme"
 }
