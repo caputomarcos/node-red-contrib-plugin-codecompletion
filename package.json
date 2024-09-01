@@ -1,6 +1,6 @@
 {
     "name": "@kazuhitoyokoi/node-red-contrib-plugin-codecompletion",
-    "version": "0.0.4",
+    "version": "0.0.5",
     "description": "Code completion plugin for Node-RED's function nodes",
     "main": "index.js",
     "engines": {
