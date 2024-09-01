@@ -9,7 +9,7 @@
     "node-red": {
         "version": ">=4.0.0",
         "plugins": {
-            "codecompletion": "index.js"
+            "completion": "index.js"
         }
     },
     "repository": {

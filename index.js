@@ -1,7 +1,7 @@
 const http = require("http");
 
 module.exports = async function (RED) {
-    RED.httpAdmin.post("/codecomplete", RED.auth.needsPermission("codecomplete.write"), async function (req, res) {
+    RED.httpAdmin.post("/completion", RED.auth.needsPermission("completion.write"), async function (req, res) {
         let code = req.body.code;
         code = code.replace("\nreturn msg;", "");
 
@@ -70,5 +70,5 @@ module.exports = async function (RED) {
         req2.end();
     });
 
-    RED.plugins.registerPlugin("codecomplete", { type: "codecomplete" });
+    RED.plugins.registerPlugin("completion", { type: "completion" });
 };
