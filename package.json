@@ -4,7 +4,7 @@
     "description": "Code completion plugin for Node-RED's function nodes",
     "main": "index.js",
     "engines": {
-        "node": ">=20.0.0"
+        "node": ">=18.0.0"
     },
     "node-red": {
         "version": ">=4.0.0",
