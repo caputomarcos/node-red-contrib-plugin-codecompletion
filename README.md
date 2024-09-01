@@ -21,6 +21,7 @@ Since this plugin uses Ollama, users need to install it in advance.
   Run the following command in the terminal.
   ```
   curl -fsSL https://ollama.com/install.sh | sh
+  ollama serve
   ```
 
 ## Demonstration
